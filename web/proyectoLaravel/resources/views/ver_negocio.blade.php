@@ -13,7 +13,7 @@
                         <td>Acciones</td>
                     </tr>
                 </thead>
-                <tbody id="tbody-consola">
+                <tbody id="tbody-negocio">
                 </tbody>
             </table>
 
@@ -22,5 +22,6 @@
 @endsection
 
 @section("javascript")
-
+    <script src="{{asset('js/servicios/negociosService.js')}}"></script>
+    <script src="{{asset('js/ver_negocio.js')}}"></script>
 @endsection

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\NegociosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("marcas/get" ,[ProductosController::class, "getmarcas"]);
+
+Route::get("negocios/get",[NegociosController::class, "getNegocio"]);
+Route::post("negocios/post",[NegociosController::class, "crearNegocios"]);
+Route::post("negocios/delete",[NegociosController::class, "eliminarNegocio"]);

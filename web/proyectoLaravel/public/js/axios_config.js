@@ -1,2 +1,1 @@
-window.axios.defaults.headers.common["X-CSRF-TOKEN"] 
-    = document.querySelector("meta[name='csrf-token']").textContent;
+window.axios.defaults.headers.common["X-CSRF-TOKEN"] = document.querySelector("meta[name='csrf-token']").textContent;
