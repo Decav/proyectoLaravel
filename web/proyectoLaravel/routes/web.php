@@ -17,4 +17,5 @@ Route::view("/","home")->name("home");
 Route::view("/agregar_negocio","agregar_negocio")->name("agregar_negocio");
 Route::view("/ver_negocio","ver_negocio")->name("ver_negocio");
 Route::view("/agregar_productos","agregar_productos")->name("agregar_productos");
+Route::view("/ver_productos","ver_productos")->name("ver_productos");
 Route::view("/etiquetas","etiquetas")->name("etiquetas");

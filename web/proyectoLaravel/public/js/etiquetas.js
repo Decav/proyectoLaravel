@@ -90,3 +90,5 @@ document.addEventListener("DOMContentLoaded" , async()=>{
     let etiqueta = await getEtiquetas() ;
     cargarTabla(etiqueta);
 });
+
+

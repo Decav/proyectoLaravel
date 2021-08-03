@@ -19,4 +19,19 @@ class ProductosController extends Controller
         return $marcas;
     }
     
+    public function crearProductos(Request $request){
+        $input = $request->all();
+        $producto = new Producto();
+        $producto->nombre = $input["nombre"];
+        $producto->descripcion = $input["descripcion"];
+        $producto->marca = $input["marca"];
+
+        $producto->save();
+        return $producto;
+    }
+
+    public function getProductos(){
+        $producto = Producto::all();
+        return $producto;
+    }
 }
