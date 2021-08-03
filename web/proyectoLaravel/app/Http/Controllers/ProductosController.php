@@ -18,5 +18,5 @@ class ProductosController extends Controller
         
         return $marcas;
     }
-
+    
 }

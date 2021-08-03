@@ -21,14 +21,6 @@
                         <select id="marca-select" class="form-select">
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="stock-txt" class="form-label">Stock Referencial</label>
-                        <input type="number" id="stock-txt" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="precio-txt" class="form-label">Precio</label>
-                        <input type="number" id="precio-txt" class="form-control">
-                    </div>
                 </div>
                 <div class="card-footer d-grid gap-1">
                     <button id="registrar_productos-btn" class="btn btn-success">Registrar Productos</button>

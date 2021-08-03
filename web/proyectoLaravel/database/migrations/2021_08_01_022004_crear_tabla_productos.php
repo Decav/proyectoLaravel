@@ -15,6 +15,8 @@ class CrearTablaProductos extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            $table->string("nombre",50);
+            $table->string("descripcion",50);
             $table->string("marca",50);
             $table->timestamps();
         });
