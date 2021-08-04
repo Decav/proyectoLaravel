@@ -18,6 +18,7 @@ class CrearTablaProductos extends Migration
             $table->string("nombre",50);
             $table->string("descripcion",50);
             $table->string("marca",50);
+            $table->string("etiquetas");
             $table->timestamps();
         });
     }

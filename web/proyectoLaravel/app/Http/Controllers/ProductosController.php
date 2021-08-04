@@ -25,6 +25,7 @@ class ProductosController extends Controller
         $producto->nombre = $input["nombre"];
         $producto->descripcion = $input["descripcion"];
         $producto->marca = $input["marca"];
+        $producto->etiquetas = $input["etiquetas"];
 
         $producto->save();
         return $producto;

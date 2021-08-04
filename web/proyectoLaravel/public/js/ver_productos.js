@@ -13,7 +13,7 @@ const cargarTabla = (producto) =>{
         let tdMarca = document.createElement("td");
         tdMarca.innerText = producto[i].marca;
         let tdEtiqueta = document.createElement("td");
-        tdEtiqueta.innerText = producto[i].Etiqueta;
+        tdEtiqueta.innerText = producto[i].etiquetas;
 
         let tdAcciones = document.createElement("td");
         
