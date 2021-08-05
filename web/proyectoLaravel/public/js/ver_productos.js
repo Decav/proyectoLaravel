@@ -1,4 +1,25 @@
 
+
+
+const iniciarEliminacion = async function(){
+    let id = this.idProductos;
+    let resp = await Swal.fire({title:"Esta seguro?",text:"Esta operacion es irreversible"
+    , icon:"error",showCancelButton:true});
+    if(resp.isConfirmed){
+        Swal.fire("La persona quiere eliminar: ");
+        if(await eliminarProductos(id)){
+            let Productos = await getProductos();
+            cargarTabla(Productos);
+            Swal.fire("Producto eliminado", "Producto eliminado exitosamente", "info");
+        }else{
+            Swal.fire("Error", "No se pudo atender la solicitud", "error");
+        }
+    }else{
+        Swal.fire("Cancelado", "Cancelado a peticion del usuario", "info");
+    }
+}
+
+
 const cargarTabla = (producto) =>{
     let tbody = document.querySelector("#tbody-productos");
     tbody.innerHTML = "";
@@ -20,7 +41,8 @@ const cargarTabla = (producto) =>{
         let botonEliminar = document.createElement("button");
         botonEliminar.innerText = "Eliminar producto";
         botonEliminar.classList.add("btn","btn-danger");
-        
+        botonEliminar.idProductos = producto[i].id;
+        botonEliminar.addEventListener("click", iniciarEliminacion);
         
         
         

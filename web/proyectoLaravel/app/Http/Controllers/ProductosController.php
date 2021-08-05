@@ -35,4 +35,12 @@ class ProductosController extends Controller
         $producto = Producto::all();
         return $producto;
     }
+
+    public function eliminarProductos(Request $request){
+        $input = $request->all();
+        $id = $input["id"];
+        $productos = Producto::findOrFail($id);
+        $productos->delete();
+        return "ok";
+    }
 }

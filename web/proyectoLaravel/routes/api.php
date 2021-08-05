@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\NegociosController;
 use App\Http\Controllers\EtiquetasController;
-
+use App\Http\Controllers\UsuariosController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,7 +25,7 @@ Route::get("marcas/get" ,[ProductosController::class, "getmarcas"]);
 
 Route::get("productos/get" ,[ProductosController::class, "getProductos"]);
 Route::post("productos/post" ,[ProductosController::class, "crearProductos"]);
-
+Route::post("productos/delete" ,[ProductosController::class, "eliminarProductos"]);
 
 
 Route::get("negocios/get",[NegociosController::class, "getNegocio"]);
@@ -35,3 +35,8 @@ Route::post("negocios/delete",[NegociosController::class, "eliminarNegocio"]);
 Route::get("etiquetas/get",[EtiquetasController::class, "getEtiquetas"]);
 Route::post("etiquetas/post",[EtiquetasController::class, "crearEtiquetas"]);
 Route::post("etiquetas/delete",[EtiquetasController::class, "eliminarEtiqueta"]);
+
+
+Route::get("usuarios/get",[UsuariosController::class, "getUsuario"]);
+Route::post("usuarios/post",[UsuariosController::class, "registrarUsuario"]);
+Route::post("usuarios/delete",[UsuariosController::class, "eliminarUsuario"]);
