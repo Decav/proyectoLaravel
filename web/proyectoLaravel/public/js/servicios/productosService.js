@@ -1,6 +1,12 @@
 //getproductos
-const getProductos = async()=>{
+const getProductos = async(filtro ="todos")=>{
     let respuesta = await axios.get("api/productos/get");
+    if(filtro == "todos"){
+        respuesta = await axios.get("api/productos/get");
+    }else{
+        respuesta = await axios.get(`api/productos/filtrar?filtro=${filtro}`);
+    }
+    console.log(respuesta.data);
     return respuesta.data;
 
 };

@@ -15,10 +15,20 @@ class ProductosController extends Controller
         $marcas [] = "Acuenta";
         $marcas [] = "Santa Isabel";
         $marcas [] = "Jumbo";
+        $marcas [] = "Soprole";
+        $marcas [] = "Costa";
+        $marcas [] = "Milo";
         
         return $marcas;
     }
     
+    public function filtrarProductos(Request $request){
+        $input = $request->all();
+        $filtro = $input["filtro"];
+        $producto = Producto::where('etiquetas', 'LIKE' ,'%'.$filtro.'%')->get();
+        return $producto;
+    }
+
     public function crearProductos(Request $request){
         $input = $request->all();
         $producto = new Producto();

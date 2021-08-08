@@ -16,7 +16,6 @@
                 <tbody id="tbody-negocio">
                 </tbody>
             </table>
-
         </div>
     </div>
 @endsection

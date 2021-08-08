@@ -1,5 +1,5 @@
 //getusuarios
-const getUsuarios = async()=>{
+const getUsuario = async()=>{
     let respuesta = await axios.get("api/usuarios/get");
     return respuesta.data;
 

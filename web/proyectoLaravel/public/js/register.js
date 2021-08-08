@@ -1,3 +1,11 @@
+$('#clave-txt').passtrength({
+    minChars: 6,
+    tooltip: true,
+    textWeak: "Debil",
+    textMedium: "Moderada",
+    textStrong: "Fuerte",
+    textVeryStrong: "Muy fuerte",
+  });
 
 document.querySelector("#register-btn").addEventListener("click", async() =>{
     
@@ -6,10 +14,6 @@ document.querySelector("#register-btn").addEventListener("click", async() =>{
     let clave = document.querySelector("#clave-txt").value.trim();
     let confirmar_clave = document.querySelector("#confirmar_clave-txt").value.trim();
     
-    
-    
-
-
     
 
     if(clave==confirmar_clave){
@@ -23,9 +27,14 @@ document.querySelector("#register-btn").addEventListener("click", async() =>{
         
         let resultado = await registrarUsuario(usuario);
         await Swal.fire("usuario creado", "usuario creado exitosamente", "success");
+        window.location.href = "register";
     }else{
         Swal.fire("Contraseña erronea", "Las contraseñas no son equivalentes", "error");
     }
     
     
+});
+
+document.addEventListener("DOMContentLoaded", () =>{
+    cerrarSesion();
 });

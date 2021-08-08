@@ -58,7 +58,33 @@ const cargarTabla = (producto) =>{
     }
 }
 
+
+
+
+
+const cargarEtiquetas = async ()=>{
+    let filtroCbx = document.querySelector("#filtro-cbx");
+    let etiquetas = await getEtiquetas();
+    
+    etiquetas.forEach(m => {
+        let option = document.createElement("option");
+        option.innerText = m.nombre;
+        option.value = m.nombre;
+        filtroCbx.appendChild(option);
+
+    });
+};
+
+
+
+document.querySelector("#filtro-cbx").addEventListener("change", async()=>{
+    let filtro = document.querySelector("#filtro-cbx").value;
+    let productos = await getProductos(filtro);
+    cargarTabla(productos);
+});
+
 document.addEventListener("DOMContentLoaded" , async()=>{
-    let producto = await getProductos() ;
+    await cargarEtiquetas();
+    let producto = await getProductos();
     cargarTabla(producto);
 });

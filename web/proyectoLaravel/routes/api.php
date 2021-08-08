@@ -24,6 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get("marcas/get" ,[ProductosController::class, "getmarcas"]);
 
 Route::get("productos/get" ,[ProductosController::class, "getProductos"]);
+Route::get("productos/filtrar" ,[ProductosController::class, "filtrarProductos"]);
 Route::post("productos/post" ,[ProductosController::class, "crearProductos"]);
 Route::post("productos/delete" ,[ProductosController::class, "eliminarProductos"]);
 
