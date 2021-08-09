@@ -27,7 +27,6 @@ document.querySelector("#register-btn").addEventListener("click", async() =>{
         
         let resultado = await registrarUsuario(usuario);
         await Swal.fire("usuario creado", "usuario creado exitosamente", "success");
-        window.location.href = "register";
     }else{
         Swal.fire("Contraseña erronea", "Las contraseñas no son equivalentes", "error");
     }
